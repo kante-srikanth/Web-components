@@ -13,15 +13,64 @@
     }
 
     body {
+        display: block;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+        transform: translate(-50%);
+        background: linear-gradient(90deg, #b8b7d1 0%, #8383a4 0%, #c7d5d0 66%);
+
+    }
+
+    .user-container {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
+    .user-container .header {
+        display: flex;
+        align-items: center;
+    }
+
+    .user-container .header input {
+
+        height: 20px;
+        width: 40px;
+        margin-left: 8px;
+        margin-right: 8px;
+        color: #8a2be2;
+        font-size: 22px;
+        outline: none;
+        font-weight: bold;
+    }
+
+    input::-webkit-inner-spin-button {
+        display: none;
+    }
+
+    .user-container .user-list {
+        height: 80vh;
+        overflow: auto;
+        width: fit-content;
+    }
+
+    .user-container>.user-list user-info:last-child {
+        margin-bottom: 0;
+    }
 </style>
 
 <body>
-    <h1>RANDOM USERS</h1>
-    <user-list></user-list>
+    <div class="user-container">
+        <h1 class="header">FETCH RANDOM <input id="user-input" required type="number" value="0" /> USERS
+        </h1>
+        <div class="user-list">
+            <user-list></user-list>
+        </div>
+    </div>
     <script type="module" src="App.js"></script>
 </body>
 

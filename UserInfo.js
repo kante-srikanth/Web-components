@@ -9,7 +9,6 @@ template.innerHTML = `
     width: 500px;
     grid-template-columns: 1fr 2fr;
     grid-gap: 7px;
-    margin-bottom: 14px;
     border-bottom: darkorchid 3px solid; 
 }
 
